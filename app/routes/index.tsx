@@ -13,10 +13,10 @@ export default function Index() {
     <main>
       <HeroSection />
       <IntroSection />
-      <LatestBlogSection />
-      <div className="bg-primary-dark">
-        <ContactForm />
-      </div>
+      {/* <LatestBlogSection /> */}
+      {/* <div className="bg-primary-dark"> */}
+      <ContactForm />
+      {/* </div> */}
     </main>
   );
 }

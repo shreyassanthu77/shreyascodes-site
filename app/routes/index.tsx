@@ -1,4 +1,5 @@
 import { MetaFunction } from "remix";
+import ContactForm from "~/components/ContactForm";
 import HeroSection from "~/components/home/HeroSection";
 import IntroSection from "~/components/home/IntroSection";
 
@@ -11,6 +12,7 @@ export default function Index() {
     <main>
       <HeroSection />
       <IntroSection />
+      <ContactForm />
     </main>
   );
 }

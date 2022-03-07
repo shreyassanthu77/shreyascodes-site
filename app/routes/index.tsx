@@ -13,7 +13,7 @@ export default function Index() {
     <main>
       <HeroSection />
       <IntroSection />
-      <LatestBlogSection />
+      {/* <LatestBlogSection /> */}
       <div className="bg-primary-dark">
         <ContactForm />
       </div>

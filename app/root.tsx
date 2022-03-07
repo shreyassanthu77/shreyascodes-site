@@ -9,6 +9,8 @@ import {
 import type { MetaFunction, LinksFunction } from "remix";
 
 import styles from "./styles/app.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export const meta: MetaFunction = () => {
   return { title: "Shreyascodes.tech" };
@@ -40,7 +42,9 @@ export default function App() {
         <Links />
       </head>
       <body className="bg-primary-medium text-white">
+        <Header />
         <Outlet />
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

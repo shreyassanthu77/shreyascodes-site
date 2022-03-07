@@ -1,7 +1,7 @@
 import React from "react";
 
 export const inputClasses = (className: string) =>
-  `outline-none px-4 py-2 bg-primary-dark rounded-t border-b-2 border-gray-300 focus:border-teal-500 transition-colors duration-150 ${className}`;
+  `outline-none px-4 py-2 bg-black/20 rounded-t border-b-2 border-gray-300 focus:border-teal-500 transition-colors duration-150 ${className}`;
 
 export const Input: React.FC<
   React.DetailedHTMLProps<

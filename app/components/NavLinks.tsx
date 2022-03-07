@@ -1,4 +1,4 @@
-import { Link } from "remix";
+import { Link, useLocation } from "remix";
 
 export type NavLink = {
   to: string;
@@ -8,20 +8,29 @@ export type NavLink = {
 export const NavLinks: React.FC<{
   links: NavLink[];
   className?: string;
-}> = ({ links, className = "" }) => (
-  <>
-    {links.map(({ to, label }) => (
-      <li key={to}>
-        <Link
-          className={`block text-sm px-4 py-2 border-b-2 border-transparent hover:border-current focus:border-current focus:outline-none transition-colors duration-150 ${className}`}
-          to={to}
-        >
-          {label}
-        </Link>
-      </li>
-    ))}
-  </>
-);
+}> = ({ links, className = "" }) => {
+  const location = useLocation();
+  return (
+    <>
+      {links.map(({ to, label }) => (
+        <li key={to}>
+          <Link
+            className={`block text-sm px-4 py-2 border-b-2 border-transparent hover:border-current focus:border-current focus:outline-none transition-colors duration-150 ${className}`}
+            to={
+              to === "/contact"
+                ? location.pathname === "/"
+                  ? "#contact"
+                  : to
+                : to
+            }
+          >
+            {label}
+          </Link>
+        </li>
+      ))}
+    </>
+  );
+};
 
 export const navLinks: NavLink[] = [
   {
@@ -33,7 +42,7 @@ export const navLinks: NavLink[] = [
     label: "About Me",
   },
   {
-    to: "/#contact",
+    to: "/contact",
     label: "Contact",
   },
 ];

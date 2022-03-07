@@ -1,0 +1,9 @@
+type ContactForm {
+  name: String!
+  email: String!
+  message: String
+}
+
+type Query {
+  findAllContactForms: [ContactForm!]!
+}

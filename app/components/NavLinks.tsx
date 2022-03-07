@@ -33,10 +33,10 @@ export const NavLinks: React.FC<{
 };
 
 export const navLinks: NavLink[] = [
-  {
-    to: "/blog",
-    label: "Blog",
-  },
+  // {
+  //   to: "/blog",
+  //   label: "Blog",
+  // },
   {
     to: "/about",
     label: "About Me",

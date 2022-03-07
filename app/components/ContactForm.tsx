@@ -10,7 +10,7 @@ const ContactForm = () => {
     <Container
       as="section"
       id="contact"
-      className="flex justify-between items-center gap-x-10 py-12"
+      className="flex justify-between gap-x-10 py-12"
     >
       <Form className="flex-1 max-w-[750px]" action="/contact" method="post">
         <h3 className="text-3xl font-medium">Contact</h3>
@@ -52,7 +52,19 @@ const ContactForm = () => {
           Save
         </Button>
       </Form>
-      <img src={ContactGraphic} alt="Contact us" className="max-w-[550px]" />
+      <div className="flex flex-col justify-evenly">
+        <img src={ContactGraphic} alt="Contact us" className="max-w-[400px]" />
+        <hr />
+        <ul>
+          <li>
+            <strong className="text-xl font-bold">Email me at</strong>
+            <br />
+            <span className="text-lg tracking-wide">
+              contact@shreyascodes.tech
+            </span>
+          </li>
+        </ul>
+      </div>
     </Container>
   );
 };

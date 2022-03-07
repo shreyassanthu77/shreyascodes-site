@@ -1,3 +1,5 @@
+declare const FAUNA_SECRET: string;
+
 import {
   ActionFunction,
   Form,
@@ -52,7 +54,7 @@ export const action: ActionFunction = async ({ request }) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.FAUNA_SECRET}`,
+        Authorization: `Bearer ${FAUNA_SECRET}`,
       },
       body: JSON.stringify({
         query,

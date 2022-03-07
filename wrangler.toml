@@ -1,0 +1,20 @@
+name = "remix-cloudflare-workers"
+type = "javascript"
+
+zone_id = ""
+account_id = ""
+route = ""
+workers_dev = true
+
+[site]
+bucket = "./public"
+entry-point = "."
+
+[build]
+command = "npm run build"
+
+[build.upload]
+format="service-worker"
+
+[vars]
+FAUNA_SECRET="fnAEhAHlSvACSV_5NqPK8N4UU6C4dgmgB48EH8ak"

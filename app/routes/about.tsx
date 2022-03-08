@@ -85,7 +85,7 @@ const About = () => {
         className="py-14 flex flex-col lg:flex-row justify-between items-start"
       >
         <img
-          className="block max-w-[500px] mt-14 drop-shadow-lg brightness-90"
+          className="block max-w-[min(500px,90vw)] mt-14 drop-shadow-lg brightness-90"
           src={MyStoryImg}
           alt="Personal Information graphic"
         />

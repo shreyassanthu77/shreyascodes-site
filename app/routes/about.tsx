@@ -15,28 +15,28 @@ const About = () => {
     <>
       <Container
         as="section"
-        className="flex justify-between items-start py-28"
+        className="flex flex-col lg:flex-row justify-between items-center py-28 text-center lg:text-left"
       >
-        <div className="max-w-[50ch]">
+        <img
+          src={UserImg}
+          className="pointer-events-none select-none"
+          alt="Shreyas Mididoddi"
+        />
+        <div className="max-w-[50ch] mt-6 lg:mt-0">
           <h2 className="block text-3xl font-semibold leading-snug">
             Hi I am Shreyas Mididoddi and I make full stack apps to make the
             world a better place by building the future today
           </h2>
-          <p className="mt-4 max-w-[35ch] text-xl leading-snug">
+          <p className="mt-4 max-w-[35ch] text-xl leading-snug mx-auto lg:mx-0">
             Besides programming I also like solving puzzles like Rubik’s cubes
             and love solving math problems. I also enjoy making DIY projects at
             home and In my leasure time you can find me surfing the interwebs or
             mindlessly scrolling through Twitter 😁
           </p>
         </div>
-        <img
-          src={UserImg}
-          className="pointer-events-none select-none"
-          alt="Shreyas Mididoddi"
-        />
       </Container>
       <div className="bg-primary-dark">
-        <Container className="py-14 flex justify-between items-center">
+        <Container className="py-14 flex flex-col lg:flex-row justify-between items-center">
           <div>
             <h2 className="text-4xl font-bold">My Skills</h2>
             <p className="mt-4 text-xl max-w-[40ch] leading-8">
@@ -44,7 +44,7 @@ const About = () => {
               here are a few of em
             </p>
             <br />
-            <div className="flex gap-x-32 text-lg">
+            <div className="flex flex-col lg:flex-row gap-y-6 gap-x-32 text-lg px-14">
               <ul className="list-disc">
                 <li>HTML 5</li>
                 <li>CSS 3</li>
@@ -52,12 +52,7 @@ const About = () => {
                 <li>TypeScript</li>
                 <li>Redux</li>
                 <li>Next JS</li>
-                <li>
-                  Remix JS <br />
-                  <span className="block text-sm font-light -translate-x-6">
-                    ( infact this site is built with it )
-                  </span>
-                </li>
+                <li>Remix JS</li>
               </ul>
               <ul className="list-disc">
                 <li>React</li>
@@ -80,21 +75,21 @@ const About = () => {
           </div>
           <img
             src={PersonalInfoImg}
-            className="max-w-[500px]"
+            className="hidden lg:block max-w-[500px]"
             alt="Shreyas Mididoddi"
           />
         </Container>
       </div>
       <Container
         as="section"
-        className="py-14 flex justify-between items-start"
+        className="py-14 flex flex-col lg:flex-row justify-between items-start"
       >
         <img
           className="block max-w-[500px] mt-14 drop-shadow-lg brightness-90"
           src={MyStoryImg}
           alt="Personal Information graphic"
         />
-        <div>
+        <div className="mt-8 lg:mt-0">
           <h2 className="text-4xl font-bold">My Story</h2>
           <p className="mt-4 text-xl max-w-[65ch] leading-8">
             I am Shreyas Mididoddi an {calculateAge()} years old software

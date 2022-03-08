@@ -18,7 +18,7 @@ const SocialLinks: React.FC = () => {
             className="block outline-none rounded-xl brightness-75 hover:brightness-150 focus:brightness-150 focus:ring-4 transition-all duration-150"
             href="https://github.com/shreyassanthu77"
           >
-            <img src={GithubLogo} alt="Github" />
+            <img className="w-10 lg:w-full" src={GithubLogo} alt="Github" />
           </a>
         </li>
         <li>
@@ -26,7 +26,7 @@ const SocialLinks: React.FC = () => {
             className="block outline-none rounded-xl hover:brightness-150 focus:brightness-150 focus:ring-4 transition-all duration-150"
             href="https://www.linkedin.com/in/shreyas-mididoddi-6692b9200/"
           >
-            <img src={LinkedInLogo} alt="Linkedin" />
+            <img className="w-10 lg:w-full" src={LinkedInLogo} alt="Linkedin" />
           </a>
         </li>
         <li>
@@ -34,7 +34,7 @@ const SocialLinks: React.FC = () => {
             className="block outline-none rounded-xl hover:brightness-150 focus:brightness-150 focus:ring-4 transition-all duration-150"
             href="https://twitter.com/Shreyassanthu77"
           >
-            <img src={TwitterLogo} alt="Twitter" />
+            <img className="w-10 lg:w-full" src={TwitterLogo} alt="Twitter" />
           </a>
         </li>
       </ul>
@@ -45,7 +45,10 @@ const SocialLinks: React.FC = () => {
 const Footer: React.FC = () => {
   return (
     <div className="bg-primary-dark border-t-[1px]">
-      <Container as="footer" className="flex justify-between items-center py-8">
+      <Container
+        as="footer"
+        className="flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between items-center py-8"
+      >
         <div>
           <img
             src={LogoWide}
@@ -59,10 +62,15 @@ const Footer: React.FC = () => {
           <span className="block mt-2">&copy; Shreyas Mididoddi 2022</span>
         </p>
         <div>
-          <strong className="text-lg">Useful Links</strong>
+          <strong className="text-lg text-center lg:text-left">
+            Useful Links
+          </strong>
           <nav className="mt-4">
             <ul>
-              <NavLinks className="my-2 px-0 pl-2" links={navLinks} />
+              <NavLinks
+                className="my-2 px-0 pl-2 text-center lg:text-left"
+                links={navLinks}
+              />
             </ul>
           </nav>
         </div>

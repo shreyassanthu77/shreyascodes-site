@@ -7,27 +7,27 @@ const HeroSection = () => {
   return (
     <Container
       as="section"
-      className="min-h-[78vh] flex justify-between items-center py-20"
+      className="lg:min-h-[78vh] flex flex-col lg:flex-row text-center lg:text-left justify-between items-center py-40 lg:py-20"
     >
       <div>
         <h1 className="block max-w-[17ch] text-5xl font-semibold leading-tight">
           Beautifully Crafted User Experiences
         </h1>
-        <p className="max-w-[30ch] mt-4 text-xl">
+        <p className="max-w-[30ch] mt-4 text-xl mx-auto lg:mx-0">
           To make the world a better place by building the future today!
         </p>
-        <div className="flex mt-6">
-          <Button as="link" to="/blog">
-            Read the blog
-          </Button>
-          <Button as="link" to="#contact" className="ml-4" variant="outlined">
+        <div className="flex flex-col lg:flex-row mt-6 justify-center lg:justify-start px-6 gap-6 lg:px-0">
+          <Button as="link" to="#contact" className="">
             Contact Me
+          </Button>
+          <Button as="link" to="/about" variant="outlined">
+            About Me
           </Button>
         </div>
       </div>
       <img
         src={HeroGraphic}
-        className="pointer-events-none select-none"
+        className="pointer-events-none select-none hidden lg:block"
         alt="user experience design"
       />
     </Container>

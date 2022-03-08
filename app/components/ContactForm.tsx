@@ -10,7 +10,7 @@ const ContactForm = () => {
     <Container
       as="section"
       id="contact"
-      className="flex justify-between gap-x-10 py-12"
+      className="flex flex-col lg:flex-row justify-between gap-x-10 py-12"
     >
       <Form className="flex-1 max-w-[750px]" action="/contact" method="post">
         <h3 className="text-3xl font-medium">Contact</h3>
@@ -53,9 +53,13 @@ const ContactForm = () => {
         </Button>
       </Form>
       <div className="flex flex-col justify-evenly">
-        <img src={ContactGraphic} alt="Contact us" className="max-w-[400px]" />
-        <hr />
-        <ul>
+        <img
+          src={ContactGraphic}
+          alt="Contact us"
+          className="hidden lg:block max-w-[400px]"
+        />
+        <hr className=" my-6 lg:my-0" />
+        <ul className="text-center lg:text-left">
           <li>
             <strong className="text-xl font-bold">Email me at</strong>
             <br />

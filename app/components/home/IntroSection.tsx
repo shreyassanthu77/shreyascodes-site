@@ -8,14 +8,14 @@ const IntroSection = () => {
     <div className="bg-primary-dark">
       <Container
         as="section"
-        className="flex justify-between items-start py-28"
+        className="flex flex-col lg:flex-row justify-between items-center lg:items-start text-center lg:text-left py-28"
       >
         <img
           src={UserImg}
           className="pointer-events-none select-none"
           alt="Shreyas Mididoddi"
         />
-        <div>
+        <div className="mt-6 lg:mt-0">
           <h2 className="block max-w-[21ch] text-3xl font-semibold leading-snug">
             Hi I am Shreyas Mididoddi and I make full stack apps to make the
             world a better place by building the future today
@@ -28,7 +28,7 @@ const IntroSection = () => {
           </p>
           <Link
             to="/about"
-            className="py-2 mt-6 text-lg w-max flex items-center border-b-2 border-transparent outline-none hover:border-current focus:border-current transition-colors duration-150"
+            className="py-2 mt-6 mx-auto lg:mx-0 text-lg w-max flex items-center border-b-2 border-transparent outline-none hover:border-current focus:border-current transition-colors duration-150"
           >
             Learn more about me here
             <svg

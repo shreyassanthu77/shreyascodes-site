@@ -100,7 +100,7 @@ export default function Contact() {
   return (
     <>
       {success ? (
-        <Container as="section" className="py-28">
+        <Container as="section" className="py-28 text-center lg:text-left">
           <h1 className="text-3xl font-bold">
             Your Message was sent Successfully
           </h1>
@@ -111,7 +111,7 @@ export default function Contact() {
             as="link"
             to="/"
             variant="outlined"
-            className="block max-w-max mt-4"
+            className="block w-full lg:max-w-max mt-4"
           >
             you can Go Home I guess
           </Button>

@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <Container
       as="section"
-      className="lg:min-h-[78vh] flex flex-col lg:flex-row text-center lg:text-left justify-between items-center py-40 lg:py-20"
+      className="lg:min-h-[78vh] flex flex-col lg:flex-row text-center lg:text-left justify-between items-center py-20"
     >
       <div>
         <h1 className="block max-w-[17ch] text-5xl font-semibold leading-tight">

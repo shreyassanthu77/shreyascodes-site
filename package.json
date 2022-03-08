@@ -14,7 +14,7 @@
     "dev:miniflare": "cross-env NODE_ENV=development miniflare ./build/index.js --watch",
     "dev": "run-p dev:*",
     "start": "cross-env NODE_ENV=production miniflare ./build/index.js",
-    "deploy": "npm run build && wrangler publish"
+    "deploy": "wrangler publish"
   },
   "dependencies": {
     "@remix-run/cloudflare-workers": "^1.2.3",

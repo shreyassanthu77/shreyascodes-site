@@ -1,5 +1,3 @@
-declare const FAUNA_SECRET: string;
-
 import {
   ActionFunction,
   Form,
@@ -19,6 +17,8 @@ export const meta: MetaFunction = () => {
 };
 
 export const action: ActionFunction = async ({ request }) => {
+  const FAUNA_SECRET: string = process.env["FAUNA_SECRET"]!;
+
   if (request.method !== "POST") {
     return redirect("../", 405);
   }
